@@ -36,17 +36,17 @@ module.exports = {
             await target.ban({ reason });
 
             const embed = new EmbedBuilder()
-                .setColor('Red')
-                .setTitle(`${target.user.tag} banned successfully.`)
+                .setColor('Green')
+                .setTitle('User banned successfully.')
                 .setFields(
                     {
                         name: 'Target',
-                        value: `${target.user.tag} \`${target.user.id}\``,
+                        value: `${target.user.tag}`,
                         inline: true
                     },
                     {
                         name: 'Moderator',
-                        value: `${member.user.tag} \`${member.user.id}\``,
+                        value: `${member.user.tag}`,
                         inline: true
                     },
                     {
@@ -60,7 +60,7 @@ module.exports = {
             return;
         } catch {
             const errorEmbed = new EmbedBuilder()
-                .setColor('Red')
+                .setColor('Yellow')
                 .setDescription('There was an error banning this member.');
 
             await interaction.reply({

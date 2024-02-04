@@ -39,7 +39,7 @@ module.exports = {
                 .setFields(
                     {
                         name: 'Member ID',
-                        value: id.toString(),
+                        value:`${member.user.tag}`,
                         inline: true
                     },
                     {
